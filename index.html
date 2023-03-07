@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PornitoRico</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+		h1 {
+			font-size: 2em;
+			color: #333;
+			margin: 0;
+			padding: 0;
+			display: inline-block;
+		}
+		form {
+			display: inline-block;
+			margin-left: 20px;
+		}
+		input[type=text] {
+			padding: 10px;
+			border: none;
+			box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+			border-radius: 2px;
+			font-size: 1.2em;
+			width: 300px;
+			outline: none;
+			background-color: #f7f7f7;
+			vertical-align: middle;
+		}
+		input[type=submit] {
+			background-color: #333;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			font-size: 1.2em;
+			border-radius: 30px;
+			cursor: pointer;
+			transition: all 0.2s ease-in-out;
+			vertical-align: middle;
+		}
+		input[type=submit]:hover {
+			background-color: #666;
+		}
+		.founders {
+			display: inline-block;
+			margin-left: 20px;
+			vertical-align: middle;
+		}
+		.founders img {
+			border-radius: 50%;
+			width: 50px;
+			height: 50px;
+			margin-right: 10px;
+			object-fit: cover;
+			object-position: center;
+		}
+	</style>
+</head>
+<body>
+	<h1>ProyectoPornito</h1>
+	<form>
+		<input type="text" placeholder="Buscar...">
+		<input type="submit" value="Buscar">
+	</form>
+	<div class="founders">
+		<a href="#" onclick="mostrarFotos()">
+			<img src="https://i.pinimg.com/originals/82/3f/e6/823fe63715de7192acb658fad88b2003.jpg" alt="Padre Fundador 1">
+			<img src="https://i.pinimg.com/736x/6d/dd/7b/6ddd7bdd8f92d5065b53b911df8c7006.jpg" alt="Padre Fundador 2">
+			<img src="https://i.pinimg.com/736x/c6/62/04/c662043892f97918d8723d4dbf778b98.jpg" alt="Padre Fundador 3">
+		</a>
+	</div>
+	<script>
+		function mostrarFotos() {
+			var fotos = document.querySelectorAll('.founders img');
+			for (var i = 0; i < fotos.length; i++) {
+				fotos[i].style.display = 'inline-block';
+			}
+		}
+	</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dibujos</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+		h1 {
+			font-size: 2em;
+			color: #333;
+			margin: 0;
+			padding: 20px;
+			text-align: center;
+		}
+		.gallery {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			padding: 20px;
+		}
+		.gallery img {
+			max-width: 100%;
+			max-height: 100%;
+			transition: all 0.2s ease-in-out;
+			cursor: pointer;
+		}
+		.gallery img:hover {
+			transform: scale(1.05);
+		}
+		.modal {
+			display: none;
+			position: fixed;
+			z-index: 1;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,0.8);
+		}
+		.modal-content {
+			margin: 10% auto;
+			padding: 20px;
+			background-color: #fff;
+			width: 80%;
+			max-width: 800px;
+			max-height: 80%;
+			overflow: auto;
+			text-align: center;
+			position: relative;
+		}
+		.modal-close {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			font-size: 1.5em;
+			color: #fff;
+			cursor: pointer;
+		}
+		.modal-image {
+			max-width: 100%;
+			max-height: 100%;
+			margin-bottom: 20px;
+		}
+		.modal-caption {
+			font-size: 1.2em;
+			color: #fff;
+			background-color: rgba(0,0,0,0.8);
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Galería de Imágenes</h1>
+	<div class="gallery">
+		<img src="ruta-a-imagen-1.jpg" alt="Imagen 1" onclick="mostrarModal(this)">
+		<img src="03 (1).png" alt="Imagen 2" onclick="mostrarModal(this)">
+		<img src="a382e3b9e16eede752609d79c41b8b71 (1).jpg" alt="Imagen 3" onclick="mostrarModal(this)">
+		<img src="image-1.png" alt="Imagen 4" onclick="mostrarModal(this)">
+		<img src="unknown-1560.png" alt="Imagen 5" onclick="mostrarModal(this)">
+		<img src="ruta-a-imagen-6.jpg" alt="Imagen 6" onclick="mostrarModal(this)">
+	</div>
+	<div class="modal" id="modal">
+		<div class="modal-content">
+			<span class="modal-close" onclick="cerrarModal()">&times;</span>
+			<img src="" alt="" class="modal-image" id="modal-image">
+			<div class="modal-caption" id="modal-caption"></div>
+		</div>
+	</div>
+	<script>
+		function mostrarModal(imagen) {
+			var modal = document.getElementById('modal');
+			var modalImagen = document.getElementById('modal-image');
+			var modalCaption = document.getElementById
+
+            ('modal-caption');
+modal.style.display = 'block';
+modalImagen.src = imagen.src;
+modalCaption.innerHTML = imagen.alt;
+}
+function cerrarModal() {
+var modal = document.getElementById('modal');
+modal.style.display = 'none';
+}
+</script>
+
+</body>
+</html>
+```
